@@ -19,7 +19,6 @@ Shader "Custom/Spaceship"
         struct Input
         {
             float2 uv_MainTex;
-            float2 uv_normalTex;
         };
         
         half _NormalStrength;
@@ -27,7 +26,7 @@ Shader "Custom/Spaceship"
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
-            float3 normal = UnpackNormal(tex2D(_NormalMap, IN.uv_normalTex));
+            float3 normal = UnpackNormal(tex2D(_NormalMap, IN.uv_MainTex));
             o.Normal = normal * float3(_NormalStrength, _NormalStrength, lerp(1/normal.b, normal.b, saturate(_NormalStrength)));
         }
         ENDCG
