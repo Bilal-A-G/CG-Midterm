@@ -51,3 +51,5 @@ Ship textures, normal and albedo : https://polyhaven.com/a/metal_plate
 Forcefield textures, normal and albedo : https://polyhaven.com/a/hexagonal_concrete_paving
 
 All external textures are located in the resources folder.
+
+Student number : 100816412
